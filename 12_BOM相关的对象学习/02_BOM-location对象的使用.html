@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>打开新的网页</button>
+    <button>替换新的网页</button>
+    <button>网页重新加载</button>
+
+    <script>
+        const btns = document.querySelectorAll('button')
+
+        // location 的方法
+        btns[0].onclick = function() {
+            location.assign('http://www.baidu.com')
+        }
+
+        btns[1].onclick = function() {
+            location.replace('http://www.baidu.com')
+        }
+
+        btns[2].onclick = function() {
+            location.reload()
+        }
+
+        // URLSearchParams
+        const urlSearchString = '?name=xizhou&age=29&height=180'
+        const searchParams = new URLSearchParams(urlSearchString)
+        console.log('searchParams', searchParams)
+        console.log('searchParams.name', searchParams.get('name'))
+        console.log('searchParams.age', searchParams.get('age'))
+        console.log('searchParams.height', searchParams.get('height'))
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>百度一下</button>
+    <script>
+        // 2. window 补充的方法
+        const btnEl = document.querySelector('button')
+        btnEl.onclick = function() {
+            window.open('http://www.baidu.com', '_self')
+        }
+        // window.close 只能关闭由 window.open 打开的网页
+    </script>
+</body>
+</html>

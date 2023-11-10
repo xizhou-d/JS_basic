@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>修改history</button>
+    <button>前进</button>
+    <script>
+        // history 中的五个方法，除了 pushState 和 replaceState 不会触发 onPupState 事件，其余三个都会触发 onPupState 事件
+        const btns = document.querySelectorAll('button')
+
+        btns[0].onclick = function() {
+            console.log(111111)
+            history.pushState({name: 'xizhou', age: 29}, false, '/xizhou')
+        }
+
+
+        btns[1].onclick = function() {
+            // history.back()
+
+            // history.forward()
+
+            history.go(1)
+        }
+    </script>
+</body>
+</html>
